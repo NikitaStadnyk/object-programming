@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8">
+</head>
+<title>Stadnyk Mykyta 3-F</title>
+<body>
+<OL START=1> 
+<LI><b>1. W jaki sposób można określić właściwość danego obiektu (dwa sposoby wraz z przykładami)?</b>
+<LI Type=circle>Sposób 1
+<br>Używając zapisu postaci:
+<br>a)
+<br>nazwa_obiektu.nazwa_właściwości = "tekst";
+<br>np.
+<br>auto.marka = "Opel Omega";
+<br>b)
+<br>nazwa_obiektu.nazwa_właściwości = liczba;
+<br>np.
+<br>auto.rok=1996;
+<br>auto.cena=25000;
+<LI Type=circle>Sposób 2
+<br>Używając zapisu postaci:
+<br>nazwa_obiektu[nazwa_właściwości];
+<br>np. auto[cena]=25000;
+</OL>
+
+<OL START=2> 
+<LI><b>W jaki sposób można odwołać się do pól (właściwości) i metod?</b>
+<LI Type=square> Do właściwości i metod można się odwołać podobnie jak do zwykłych zmiennych i funkcji, trzeba tylko przed ich nazwą umieścić nazwę obiektu, którego są elementami.
+<br>np. console.log(samochod1.kolor); ? wyœwietla kolor obiektu samochod
+</OL>
+
+<OL START=3> 
+<LI><b>Wymień cechy charakterystyczne konstruktora.</b>
+<LI Type=circle>-Jest wywoływany (uruchamiany) automatycznie w chwili tworzenia obiektu danej klasy - na rzecz tego obiektu.
+ <LI Type=circle>nazywa się tak samo jak klasa,
+<LI Type=circle> -Nie zwraca żadnej wartości.
+ <LI Type=circle>-Może przyjmować argumenty - tak jak zwykła funkcja czy metoda, aby następnie powołać do życia obiekt za pomocą operatora new.
+</OL>
+
+<OL START=4> 
+<LI><b>4. Konstruowanie obiektu na podstawie przykładu obiekt ma trzy pola oraz jedną metodę.</b>
+<LI Type=square>{<br>
+nazwisko : ‘Kowalski’,<br>
+imie :’Jan’,<br>
+zawod :’piekarz’,<br>
+wyświetl :function ()<br>
+{<br>
+Document.write(this.nazwisko + ‘ ‘ + this.imie)<br>
+}<br>
+}<br>
+
+</OL>
+
+<OL START=5> 
+<LI><b>Znaczenie słowa this. Jak oddzielamy pola oraz metody?</b>
+<LI Type=square>  var osoba_1 =
+<LI Type=square> Słowo kluczowe this pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu. Pola i metody oddzielamy przecinkami w obrębie jednego obiektu.
+</OL>
+
+<OL START=6> 
+<LI><b>Konstruktor w JS na podstawie przykładu wraz z opisem.</b>
+<LI Type=square>Zostanie utworzony konstruktor o nazwie klient z<br> właściwościami nazwisko, imie, zawod oraz<br>
+metodą wypisz(). Właściwościom obiektu zostały przypisane wartości parametrów.<br> Użyte słowo
+kluczowe this odnosi się do aktualnego obiektu i pozwala na przypisanie wartości parametru do<br>
+odpowiedniego pola tego obiektu.<br>
+<LI Type=square>function klient(nazwisko_k,imie_k,zawod_k)<br>
+{<br>
+this.nazwisko=nazwisko_k;<br>
+this.imie=imie_k;<br>
+this.zawod=zawod_k;<br>
+wypisz = function ()<br>
+{<br>
+alert(this.nazwisko + ' ' + this.imie)<br>
+}<br>
+}<br>
+</OL>
+
+
+
+<OL START=7> 
+<LI><b>Znaczenie słowa kluczowego New wraz z przykładem.</b>
+<LI Type=square>Do utworzenia nowego obiektu na podstawie konstruktora stosowane jest słowo kluczowe new.
+	<LI Type=square>Przykład<br>
+var osoba1 = new klient('Kowalski', 'Jan', 'kierowca');<br>
+var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');<br>
+Powstały dwa nowe obiekty osoba1 i osoba2 należące do klasy klient.<br>
+</OL>
+
+<OL START=8> 
+<LI><b>Znaczenie słowa kluczowego prototype wraz z przykładem i opisem.</b>
+<LI Type=square>Właściwość prototype<br>
+Do definowania metod i właściwości dla obiektu jest wykorzystana właściwości <br>prototype.<br>
+<LI Type=square>function klient()<br>
+{<br>
+this.nazwisko='Bielski';<br>
+this.imie='Paweł';<br>
+}<br>
+klient.prototype.pisz_dane = function ()<br>
+{<br>
+document.write(this.nazwisko + ' ' + this.imie)<br>
+}<br>
+klient.prototype.zawod = 'kierowca';<br>
+var osoba1 = new klient();<br>
+osoba1.pisz_dane();<br>
+<LI Type=circle>W definicji konstruktora nie zostały zadeklarowane żadne metody i właściwości.<br> 
+Dopiero po użyciu
+właściwości prototype została dodana metoda pisz_dane oraz właściwość zawod. <br>Od tej pory każdy
+nowo tworzony obiekt na podstawie konstruktora klient będzie posiadał tę dodatkową właściwość i<br>
+metodę.
+Właściwość prototype może być również wykorzystana do dodawania dodatkowych<br>
+metod lub właściwości do istniejących obiektów.<br>
+</OL>
+</body>
+</html>

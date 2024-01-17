@@ -1,0 +1,31 @@
+<html>
+ <head>
+ <script type="text/javascript">
+ function spodnie(firma_a,model_a,rozmiar_a)
+{
+  this.firma=firma_a;
+  this.model=model_a;
+  this.rozmiar=rozmiar_a;
+}
+  spodnie.prototype.wypisz = function () 
+   {
+      alert(this.firma + ' ' + this.model+ ' ' + this.rozmiar);
+   };
+ var spodnie1 = new spodnie("Giacomo Conti", "Wełniane spodnie", "176/82"); //
+ var spodnie2 = new spodnie("FABIO", "Jasne granatowe jeansy", "30 N"); 
+ var spodnie3 = new spodnie("FERNANDO", "Spodnie męskie z lnu", "170/82"); 
+  spodnie1.wypisz(); 
+  spodnie2.wypisz();
+  spodnie3.wypisz();
+  document.write("Firma:"+spodnie1.firma+" Model: "+spodnie1.model+" Rozmiar: "+spodnie1.rozmiar);
+  document.write("<br>");
+  document.write("Firma:"+spodnie2.firma+" Model: "+spodnie2.model+" Rozmiar: "+spodnie2.rozmiar);
+  document.write("<br>");
+  document.write("Firma:"+spodnie3.firma+" Model: "+spodnie3.model+" Rozmiar: "+spodnie3.rozmiar);
+ </script>
+ </head>
+<body>
+<br>
+ programowanie obiektowe 
+ </body>
+</html>
