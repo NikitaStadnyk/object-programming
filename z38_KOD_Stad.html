@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaliczenie - Wyświetlanie Kodu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 600px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #codeTextarea {
+            width: calc(100% - 20px);
+            height: 300px;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            resize: none;
+        }
+
+        #displayCode {
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: left;
+        }
+
+        #displayButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        #displayButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <h1>Zaliczenie - Wyświetlanie Kodu zad38</h1>
+
+        <textarea id="codeTextarea" placeholder="Stadnyk">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stadnyk Mykyta 3Fg2</title>
+    <script>
+var Imie_sta = prompt("Podaj wartość Imienia:");
+var Nazwisko_sta = prompt("Podaj wartość Nazwiska:");
+var dzienUrodzenia_sta = prompt("Podaj wartość dnia urodzenia:");
+var DR=+dzienUrodzenia_sta;
+var liczba1 = Imie_sta.length;
+var liczba2 = liczba1 + 7;
+var liczba3 = Nazwisko_sta.length;
+var liczba4 = liczba3 + 4;
+var stylWyświetlenia_sta = "color: green; font-size: 41px; background-color: silver;";
+document.write("<div style='" + stylWyświetlenia_sta + "'>");
+document.write("Imię użytkownika: " + Imie_sta + "<br>");
+document.write("Nazwisko użytkownika: " + Nazwisko_sta + "<br>");
+document.write("liczba1 = " + liczba1 + "<br>");
+document.write("liczba2 = " + liczba2 + "<br>");
+document.write("liczba3 = " + liczba3 + "<br>");
+document.write("liczba4 = " + liczba4 + "<br>");
+document.write("</div>");
+document.write("<br>");
+var stylWyświetlenia2_sta = "color: red; font-size: 5.85px; background-color: silver;";
+document.write("<div style='" + stylWyświetlenia2_sta + "'>");
+document.write("---------------MENU-------------" + "<br>");
+document.write(liczba1 + "wyświetlanie teorii o operatorach logicznych" + "<br>");
+document.write(liczba3+20 + "sprawdzanie czy liczba należy do przedziału (od " + liczba1 + " do " + liczba2 + "]" + "<br>");
+document.write(DR+50 + "sprawdzanie czy liczba należy do przedziału (od  -oo; " + liczba3 + ") do [" + liczba4 + ";+oo)" + "<br>");
+document.write("</div>");
+
+function pobierzOpcje() {
+            var opcja = prompt("Podaj wartość dla opcji:");
+            if(opcja==liczba1)
+{
+var stylWyświetlenia4_sta = "color: blue; font-size: 7px; background-color: silver;";
+document.write("<div style='" + stylWyświetlenia4_sta + "'>");
+document.write("Jesteś w opcja " + liczba1 + " --> teoria");
+document.write("</div>");
+var stylWyświetlenia5_sta = "color: green; font-size: 7px; background-color: silver;";
+document.write("<div style='" + stylWyświetlenia5_sta + "'>");
+document.write("&& i x=3 y=4(x<9 && y>2)wynik-->prawda" + "<br>");
+document.write("|| lub x=3 y=4(x==8 || y==6)wynik-->falsz" + "<br>");
+document.write("! zaprzeczanie x=3 y=4 !(x==y)wynik-->prawda" + "<br>");
+document.write("</div>");
+}
+
+if(opcja==liczba3+20)
+{
+var stylWyświetlenia6_sta = "color: green; font-size: 7px; background-color: silver;";
+document.write("<div style='" + stylWyświetlenia6_sta + "'>");
+document.write("Jesteś w opcji " + liczba3+20 + "-->przedzial"+ "<br>");
+var liczba = prompt("Podaj liczbe:");
+var Liczba=+liczba;
+if(Liczba > liczba1 && Liczba <= liczba2)
+{
+document.write("liczba nalezy do przydzialu" + "<br>");
+}else{
+document.write("liczba nie nalezy do przydzialu" + "<br>");
+}
+document.write("</div>");
+}
+            if(opcja==DR+50)
+{
+var number=DR+50;
+
+
+if((opcja!=liczba1)&&(opcja!=liczba3+20)&&(opcja!=DR+50))
+{
+var stylWyświetlenia3_sta = "color: red; font-size: 7px; background-color: silver;";
+document.write("<div style='" + stylWyświetlenia3_sta + "'>");
+document.write("nie ma takiej opcji"+"<br>");
+document.write("</div>");
+}
+        }
+if(opcja==58){
+   
+   document.write("opcja 58");
+   var stylWyświetlenia7_sta = "color: green; font-size: 7px; background-color: silver;";
+document.write("<div style='" + stylWyświetlenia7_sta + "'>");
+document.write("Jesteś w opcji ");
+var liczba = prompt("Podaj liczbe:");
+var Liczba=+liczba;
+if(Liczba < liczba3 || Liczba >= liczba4)
+{
+document.write("liczba nalezy do przydzialu" + "<br>");
+}
+else{
+document.write("liczba nie nalezy do przydzialu" + "<br>");
+}
+document.write("</div>");
+}
+}
+
+    </script>
+</head>
+<body>
+Stadnyk Mykyta 3-Fg2
+<button onclick="pobierzOpcje()">Pobierz opcję</button>
+</body>
+</html>
+        </textarea>
+
+        <button id="displayButton" onclick="displayCode()">Wyświetl Kod</button>
+
+        <div id="displayCode"></div>
+
+    </div>
+
+    <script>
+        function displayCode() {
+            const codeTextarea = document.getElementById('codeTextarea');
+            const displayCode = document.getElementById('displayCode');
+            const code = codeTextarea.value;
+            displayCode.innerHTML = code;
+        }
+    </script>
+
+</body>
+</html>

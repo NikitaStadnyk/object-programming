@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Stadnyk Mykyta 3-Fg2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            color: #006400;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #006400;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 20px);
+            margin-bottom: 20px;
+        }
+
+        input[type="button"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50; /* Jaśniejszy zielony */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #009933; /* Jaśniejszy zielony po najechaniu */
+        }
+
+        #wynik {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        #wynik p {
+            color: #006400;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        #teoria {
+            margin-top: 20px;
+            color: green;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        #teoria p {
+            margin: 5px 0;
+        }
+
+        #teoria span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Proste działania</h1>
+    <h1>Stadnyk klasa 3F</h1>
+    <label for="a">Podaj pierwszą liczbę:</label>
+    <input type="number" id="a">
+    <br><br>
+    <label for="b">Podaj drugą liczbę:</label>
+    <input type="number" id="b">
+    <br><br>
+    <input type="button" value="DODAWANIE" onclick="suma()">
+    <input type="button" value="ODEJMOWANIE" onclick="roznica()">
+    <input type="button" value="MNOŻENIE" onclick="iloczyn()">
+    <input type="button" value="DZIELENIE" onclick="iloraz()">
+    <input type="button" value="TEORIA" onclick="teoria()">
+    <div id="wynik"></div>
+    <div id="teoria"></div>
+</div>
+<script>
+    function suma() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        if (a == "" || b == "") {
+            document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+        } else {
+            a = parseFloat(a);
+            b = parseFloat(b);
+            var suma = a + b;
+            document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma;
+        }
+    }
+
+    function roznica() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        if (a == "" || b == "") {
+            document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+        } else {
+            a = parseFloat(a);
+            b = parseFloat(b);
+            var roznica = a - b;
+            document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica;
+        }
+    }
+
+    function iloczyn() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        if (a == "" || b == "") {
+            document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+        } else {
+            a = parseFloat(a);
+            b = parseFloat(b);
+            var iloczyn = a * b;
+            document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn;
+        }
+    }
+
+    function iloraz() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        if (a == "" || b == "") {
+            document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+        } else {
+            a = parseFloat(a);
+            b = parseFloat(b);
+            if (b == 0) {
+                document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+            } else {
+                var iloraz = a / b;
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz;
+            }
+        }
+    }
+
+    function teoria() {
+        document.getElementById("teoria").innerHTML = "\
+        <p>pierwsza linia teorii</p>\
+        <p><span>&lt;</span>label for=<span>&quot;</span>a<span>&quot;</span>><span>&lt;</span>font color=red size=4>a<span>&lt;</span><span>/label</span><span>&gt;</span></p>\
+        <p>wytłumaczenia</p>\
+        <p>wykonanie numerycznego pola formularza z opisem 'Podaj pierwszą liczbę:' a nazwa pola to 'a' </p>\
+        <p>druga";
+    }
+</script>
+</body>
+</html>
