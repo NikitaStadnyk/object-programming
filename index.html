@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -156,6 +157,184 @@
             <button class="additionalButton" onclick="openWindow('z56_KOD_Stad.html')">Zadanie 56 KOD</button>
             <button class="additionalButton" onclick="openWindow('z57_KOD_Stad.html')">Zadanie 57 KOD</button>
             <button class="additionalButton" onclick="openWindow('z58_KOD_Stad.html')">Zadanie 58 KOD</button>
+        </div>
+
+    </div>
+
+    <script>
+        function openWindow(url) {
+            const windowWidth = 600;
+            const windowHeight = 700;
+            const windowLeft = (window.innerWidth - windowWidth) / 2;
+            const windowTop = (window.innerHeight - windowHeight) / 2 + 50;
+            window.open(url, '_blank', `width=${windowWidth}, height=${windowHeight}, left=${windowLeft}, top=${windowTop}`);
+        }
+    </script>
+
+</body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stadnyk Mykyta 3-Fg2</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Zamiast height: 100vh; */
+        }
+
+        #container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto; /* Dodajemy pionowe przewijanie */
+            width: 400px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #studentName {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .buttonContainer {
+            margin-bottom: 20px;
+        }
+
+        .taskButton, .additionalButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .taskButton:hover, .additionalButton:hover {
+            background-color: #45a049;
+        }
+
+        .lineSeparator {
+            width: 100%;
+            border-top: 2px solid #4CAF50;
+            margin: 20px 0;
+        }
+
+        #codeSection {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <h1>Szkielet zaliczeniowy</h1>
+
+        <input type="text" id="studentName" placeholder="Stadnyk Mykyta 3-Fg2">
+
+        <div class="buttonContainer">
+            <button class="taskButton" onclick="openWindow('z28_Stad.html')">Zadanie 28</button>
+            <button class="taskButton" onclick="openWindow('z29_Stad.html')">Zadanie 29</button>
+            <button class="taskButton" onclick="openWindow('z30_Stad.html')">Zadanie 30</button>
+            <button class="taskButton" onclick="openWindow('z31_Stad.html')">Zadanie 31</button>
+            <button class="taskButton" onclick="openWindow('z32_Stad.html')">Zadanie 32</button>
+            <button class="taskButton" onclick="openWindow('z35_Stad.html')">Zadanie 35</button>
+            <button class="taskButton" onclick="openWindow('z35_Stad.html')">Zadanie 35 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z36_Stad.html')">Zadanie 36 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z37_Stad.html')">Zadanie 37 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z38_Stad.html')">Zadanie 38 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z39_Stad.html')">Zadanie 39 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z40_Stad.html')">Zadanie 40 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z35_Stad.html')">Zadanie 41 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z36_Stad.html')">Zadanie 42 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z37_Stad.html')">Zadanie 43 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z38_Stad.html')">Zadanie 44 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z39_Stad.html')">Zadanie 39 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z40_Stad.html')">Zadanie 40 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z41_Stad.html')">Zadanie 41 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z42_Stad.html')">Zadanie 42 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z43_Stad.html')">Zadanie 43 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z44_Stad.html')">Zadanie 44 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z45_Stad.html')">Zadanie 45 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z46_Stad.html')">Zadanie 46 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z47_Stad.html')">Zadanie 47 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z48_Stad.html')">Zadanie 48 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z49_Stad.html')">Zadanie 49 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z50_Stad.html')">Zadanie 50 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z51_Stad.html')">Zadanie 51 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z52_Stad.html')">Zadanie 52 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z53_Stad.html')">Zadanie 53 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z54_Stad.html')">Zadanie 54 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z55_Stad.html')">Zadanie 55 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z56_Stad.html')">Zadanie 56 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z57_Stad.html')">Zadanie 57 Wiosna</button>
+            <button class="taskButton" onclick="openWindow('z58_Stad.html')">Zadanie 58 Wiosna</button>
+            
+        </div>
+
+        <div class="lineSeparator"></div>
+
+        <div id="codeSection">KOD</div>
+
+        <div class="buttonContainer">
+            <button class="additionalButton" onclick="openWindow('z30_KOD_Stad.html')">Zadanie 30 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z31_KOD_Stad.html')">Zadanie 31 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z32_KOD_Stad.html')">Zadanie 32 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z35_KOD_Stad.html')">Zadanie 35 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z36_KOD_Stad.html')">Zadanie 36 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z37_KOD_Stad.html')">Zadanie 37 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z38_KOD_Stad.html')">Zadanie 38 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z39_KOD_Stad.html')">Zadanie 39 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z42_KOD_Stad.html')">Zadanie 42 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z43_KOD_Stad.html')">Zadanie 43 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z44_KOD_Stad.html')">Zadanie 44 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z45_KOD_Stad.html')">Zadanie 45 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z46_KOD_Stad.html')">Zadanie 46 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z47_KOD_Stad.html')">Zadanie 47 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z48_KOD_Stad.html')">Zadanie 48 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z49_KOD_Stad.html')">Zadanie 49 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z51_KOD_Stad.html')">Zadanie 51 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z52_KOD_Stad.html')">Zadanie 52 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z53_KOD_Stad.html')">Zadanie 53 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z54_KOD_Stad.html')">Zadanie 54 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z55_KOD_Stad.html')">Zadanie 55 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z56_KOD_Stad.html')">Zadanie 56 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z57_KOD_Stad.html')">Zadanie 57 KOD</button>
+            <button class="additionalButton" onclick="openWindow('z58_KOD_Stad.html')">Zadanie 58 KOD</button>
+            <!-- Mykyta Stadnyk KOD -->
         </div>
 
     </div>
