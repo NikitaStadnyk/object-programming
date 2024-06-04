@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zad57 Stadnyk</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .output {
+      font-size: 18px;
+      color: red;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      max-width: 800px;
+    }
+    .result {
+      width: 45%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Obliczenia Zad57</h1>
+
+  <div class="output">
+    <div class="result" id="left">
+      <script language="Javascript">
+        for(i = 28; i <= (28 + 15); i++) { 
+          p_2_kow = Math.sqrt(i).toFixed(2); 
+          document.write("i=" + i + " pierw_2=" + p_2_kow + "<br>"); 
+        }
+      </script>
+    </div>
+    <div class="result" id="right">
+      <script language="Javascript">
+        for(i = 28; i <= (28 + 15); i++) { 
+          p_2_kow = Math.sqrt(i).toFixed(2); 
+          p_4_kow = Math.sqrt(p_2_kow).toFixed(2); 
+          document.write("i=" + i + " pierw_4=" + p_4_kow + "<br>"); 
+        }
+      </script>
+    </div>
+  </div>
+
+</body>
+</html>

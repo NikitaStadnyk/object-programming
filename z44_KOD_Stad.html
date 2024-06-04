@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaliczenie - Wyświetlanie Kodu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 600px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #codeTextarea {
+            width: calc(100% - 20px);
+            height: 300px;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            resize: none;
+        }
+
+        #displayCode {
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: left;
+        }
+
+        #displayButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        #displayButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+
+
+        <h1>Zaliczenie - Wyświetlanie Kodu zad44</h1>
+
+
+
+
+        <textarea id="codeTextarea" placeholder="Stadnyk">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Wyświetlanie Imienia i Nazwiska</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Wyświetlanie Imienia i Nazwiska</h2>
+
+  <script>
+    var nazwisko = "Stadnyk";
+    var imie = "Mykyta"; 
+    var liczbaLiterNazwiska = nazwisko.length;
+
+    var ile_razy_wyswietlic = (liczbaLiterNazwiska % 4) + 10;
+    var wielkosc_liter = (liczbaLiterNazwiska % 3) + 40;
+
+    document.write(`<p>Ilość wykonania pętli = ${ile_razy_wyswietlic}</p>`);
+    document.write(`<p>Wielkość liter = ${wielkosc_liter}px</p>`);
+
+    for (i_s = 0; i_s < ile_razy_wyswietlic; i_s++) {
+      if (i_s % 2 === 0) {
+        document.write(`<p style="font-size: ${wielkosc_liter}px;">${nazwisko}</p>`);
+      } else {
+        document.write(`<p style="font-size: ${wielkosc_liter}px;">${imie}</p>`);
+      }
+    }
+  </script>
+</body>
+</html>
+
+        </textarea>
+
+
+
+
+        <button id="displayButton" onclick="displayCode()">Wyświetl Kod</button>
+
+        <div id="displayCode"></div>
+
+    </div>
+
+    <script>
+        function displayCode() {
+            const codeTextarea = document.getElementById('codeTextarea');
+            const displayCode = document.getElementById('displayCode');
+            const code = codeTextarea.value;
+            displayCode.innerHTML = code;
+        }
+    </script>
+
+</body>
+</html>

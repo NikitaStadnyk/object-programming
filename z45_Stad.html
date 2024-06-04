@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>zad45 Stadnyk</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .output {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Wyświetlanie Imienia i Nazwiska</h1>
+
+  <script>
+    var nazwisko = "Stadnyk";
+    var imie = "Mykyta"; 
+    var liczbaLiterNazwiska = nazwisko.length;
+
+    var ile_razy_wyswietlic = (liczbaLiterNazwiska % 4) + 10;
+    var wielkosc_liter = (liczbaLiterNazwiska % 3) + 40;
+
+    document.write(`<p>Ilość wykonania pętli = ${ile_razy_wyswietlic}</p>`);
+    document.write(`<p>Wielkość liter = ${wielkosc_liter}px</p>`);
+
+    var dana = parseInt(prompt("Wprowadź liczbę:", "0"), 10);
+    var kolor = dana % 2 === 0 ? "blue" : "green";
+    var tekst = dana % 2 === 0 ? nazwisko : imie;
+
+    for (i_s = 0; i_s < ile_razy_wyswietlic; i_s++) {
+      document.write(`<p style="font-size: ${wielkosc_liter}px; color: ${kolor};">${tekst}</p>`);
+    }
+  </script>
+
+</body>
+</html>

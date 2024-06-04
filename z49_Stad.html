@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>zad45 Stadnyk</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .output {
+      font-size: 30px;
+      color: red;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Silnia Stadnyk Mykyta</h1>
+
+  <script>
+    var liczba_sta = parseInt(prompt("Wprowadź liczbę:", "0"));
+    var Suma_silni = 1;
+    for (i_s = 1; i_s < liczba_sta; i_s++) {
+      Suma_silni = Suma_silni*(i_s+1);
+    }
+    document.write(`<div class="output"><p>Silnia ` + i_s + ` = ` + Suma_silni + `</p></div>`);
+  </script>
+
+</body>
+</html>

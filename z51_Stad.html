@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head> 
+ <meta charset="utf-8">
+ <title>Stadnyk zad51 </title>
+ <style>
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: left;
+    margin: 20px 0;
+}
+
+
+h2 {
+    font-size: 2em;
+    color: #666;
+    margin: 15px 0;
+}
+ </style>
+</head> 
+<body> 
+ <h1>Stadnyk Mykyta</h1>
+ <script language="JavaScript">
+ var n_sta=parseFloat (prompt("ile razy powtórzyć=",""));
+ var inicjaly=(prompt("podaj twoje inicjaly=",""));
+ for ( var i_s=1; i_s<=n_sta; i_s++)
+ {
+ for ( var k_s=1; k_s<=i_s; k_s++)
+ {
+ document.write("&nbsp"); 
+ }
+ document.write(i_s+"_"+inicjaly+"_"+i_s+"<br>");
+ }
+ </script>
+</body> 
+</html>

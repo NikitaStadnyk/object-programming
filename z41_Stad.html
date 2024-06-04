@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Pętle w JavaScript</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #c0c0c0;
+      font-family: Arial, sans-serif;
+    }
+    .content {
+      color: #00ff00;
+      font-size: 25px;
+      margin: 20px;
+      border: 2px solid #00ff00;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #2a2a2a;
+    }
+    .code {
+      background-color: #333;
+      padding: 10px;
+      border-radius: 5px;
+      color: #00ff00;
+      font-family: "Courier New", Courier, monospace;
+    }
+    h2 {
+      color: #00ff00;
+    }
+    p {
+      color: #c0c0c0;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h2>Pętle w JavaScript</h2>
+    
+    <p>Pętla <strong>for</strong> jest używana, gdy wiemy, ile razy chcemy wykonać kod. Składa się z trzech części:</p>
+    <div class="code">
+      for(zainicjowanie_zmiennej; warunek_kończący_wykonywanie_pętli; zmiana_zmiennej) {<br>
+      &nbsp;&nbsp;kod który zostanie wykonany pewną ilość razy<br>
+      }
+    </div>
+    
+    <p>Pętla <strong>while</strong> wykonuje kod tak długo, jak długo warunek jest spełniony:</p>
+    <div class="code">
+      while (wyrażenie_sprawdzające_zakończenie_pętli) {<br>
+      &nbsp;&nbsp;...fragment kodu który będzie powtarzany...<br>
+      }
+    </div>
+    
+    <p>Pętla <strong>do...while</strong> wykonuje kod co najmniej raz, a następnie powtarza go tak długo, jak długo warunek jest spełniony:</p>
+    <div class="code">
+      do {<br>
+      &nbsp;&nbsp;...fragment kodu który będzie powtarzany...<br>
+      } while (false)
+    </div>
+
+    <h2>Informacje o Pętlach</h2>
+    <p>Pętle w programowaniu są kluczowym narzędziem do wykonywania powtarzalnych zadań. Pozwalają na wielokrotne wykonywanie tego samego fragmentu kodu, co może znacznie uprościć i skrócić kod.</p>
+    <p><strong>for</strong> - Najlepiej stosować, gdy liczba iteracji jest znana.</p>
+    <p><strong>while</strong> - Używamy, gdy nie znamy liczby iteracji, ale znamy warunek, który musi być spełniony.</p>
+    <p><strong>do...while</strong> - Podobna do while, ale kod wykona się przynajmniej raz, bez względu na spełnienie warunku.</p>
+  </div>
+</body>
+</html>

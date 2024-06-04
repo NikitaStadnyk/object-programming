@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zad58</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .output {
+      font-size: 18px;
+      color: red;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="output">
+    <h1>Wyświetlanie liczb Stadnyk</h1>
+    <script language="Javascript">
+      // Zad58
+      var x = prompt("Podaj liczbę 1=", "");
+      var Liczba1_bil = parseInt(x);
+
+      x = prompt("Podaj liczbę 2=", "");
+      var Liczba2_bil = parseInt(x);
+
+      if (Liczba1_bil < Liczba2_bil) {
+        for (i = Liczba1_bil; i <= Liczba2_bil; i++) {
+          if (i % 2 === 1) {
+            document.write("<p style='font-size: 18px; color: green;'>" + i + "</p>");
+          }
+        }
+      } else if (Liczba1_bil > Liczba2_bil) {
+        for (i = Liczba1_bil; i >= Liczba2_bil; i--) {
+          if (i % 2 === 1) {
+            document.write("<p style='font-size: 9px; color: blue;'>" + i + "</p>");
+          }
+        }
+      } else {
+        confirm("Liczby są równe, brak obliczeń");
+      }
+    </script>
+  </div>
+</body>
+</html>
