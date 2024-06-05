@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Stadnyk zad52</title>
+  <title>Stadnyk zad53</title>
   <style>
     body {
       font-family: monospace;
@@ -15,21 +15,14 @@
       justify-content: center;
       height: 100vh;
     }
-    .output {
-      white-space: pre;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
   </style>
 </head>
 <body>
-  <h1>Wyświetlanie prostokąta Stadnyk</h1>
+  <h1>Wyświetlanie Prostokąta Stadnyk</h1>
   <script>
-   
-    var nazwisko = "Stadnyk";
-    var imie = "Mykyta";        
+    
+    var nazwisko = (prompt("Podaj nazwisko:",""));
+    var imie = (prompt("Podaj imię:",""));
 
     var a_sta = (nazwisko.length % 4) + 5;
     var b_sta = (imie.length % 6) + 20;
@@ -39,12 +32,14 @@
     }
     document.write("<br>");
 
+    var wiersz_sta = "*";
+    for (var i = 1; i <= (b_sta - 2); i++) {
+      wiersz_sta += "&nbsp;";
+    }
+    wiersz_sta += "*";
+
     for (var i = 0; i < a_sta - 2; i++) {
-      document.write("*&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
-      for (var j = 0; j < b_sta - 2; j++) {
-        document.write("");
-      }
-      document.write("*<br>");
+      document.write(wiersz_sta + "<br>");
     }
 
     for (var i = 0; i < b_sta; i++) {

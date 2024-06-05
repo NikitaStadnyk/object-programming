@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Stadnyk zad54</title>
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <h1>Wyświetlanie Prostokąta Stadnyk</h1>
+  <script>
+    
+    var nazwisko = (prompt("Podaj nazwisko:",""));
+    var imie = (prompt("Podaj imię:",""));
+
+    var a = (nazwisko.length % 4) + 5;
+    var b = (imie.length % 6) + 20;
+
+    function rysujProstokat(a, b) {
+
+      for (var i = 0; i < b; i++) {
+        document.write("*");
+      }
+      document.write("<br>");
+
+      for (var i = 0; i < a - 2; i++) {
+        document.write("*");
+        for (var j = 0; j < b - 2; j++) {
+          document.write("&nbsp;");
+        }
+        document.write("*<br>");
+      }
+
+      for (var i = 0; i < b; i++) {
+        document.write("*");
+      }
+    }
+    rysujProstokat(a, b);
+  </script>
+</body>
+</html>
